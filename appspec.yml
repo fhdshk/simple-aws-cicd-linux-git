@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: web/
+    destination: /usr/share/nginx/html
+hooks:
+  BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 30
+      runas: root
