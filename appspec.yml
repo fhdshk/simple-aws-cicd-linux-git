@@ -17,3 +17,8 @@ hooks:
     - location: scripts/start_nginx.sh
       timeout: 300
       runas: root
+
+      BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 30
+      runas: root
