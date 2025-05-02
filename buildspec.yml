@@ -3,18 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing NGINX
-      
-      - sudo yum install nginx -y
-     
+      - echo Installing dependencies (if needed)
+      # Optionally build/minify files here
+
   build:
     commands:
-      - echo Build started on `date`
-      - sudo cp web/index.html /usr/share/nginx/html/
+      - echo Build phase - nothing to compile
+
   post_build:
     commands:
-      - echo Configuring NGINX
-      - sudo systemctl restart nginx
+      - echo Build completed on `date`
 
 artifacts:
   files:
